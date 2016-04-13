@@ -205,6 +205,8 @@ April 2016 v1.0</text>
 <text x="0.5" y="34.5" size="0.8128" layer="1" font="vector" rot="R90" align="top-right">SIDERIDIS - IMEC - KULEUVEN</text>
 <text x="30.3925" y="34.065" size="1.4224" layer="25" font="vector" align="center">+</text>
 <text x="35.79" y="34.065" size="1.4224" layer="25" font="vector" align="center">-</text>
+<text x="44.315" y="25.61" size="1.016" layer="1" font="vector" rot="R90" align="bottom-center">TOP</text>
+<text x="44.2675" y="25.61" size="1.016" layer="16" font="vector" rot="MR90" align="top-center">BOTTOM</text>
 </plain>
 <libraries>
 <library name="Paschalis_connectors">

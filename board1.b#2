@@ -186,7 +186,7 @@ DS18B20</text>
 <text x="43.4975" y="14.605" size="1.016" layer="26" font="vector" rot="MR90" align="bottom-center">DQ</text>
 <text x="43.4975" y="10.4775" size="1.016" layer="26" font="vector" rot="MR90" align="bottom-center">GND</text>
 <text x="26.78" y="34.4725" size="1.016" layer="26" font="vector" rot="MR0" align="top-right">Paschalis Sideridis
-April 2016</text>
+April 2016 v1.0</text>
 <text x="22.5425" y="6.985" size="1.016" layer="16" font="vector" rot="MR0" align="bottom-center">IMEC - KULEUVEN</text>
 <dimension x1="0" y1="35" x2="19" y2="35" x3="9.5" y3="37" textsize="0.6096" layer="47" width="0.03"/>
 <dimension x1="19" y1="35" x2="26" y2="35" x3="22.5" y3="23.5" textsize="0.6096" layer="47" width="0.03"/>

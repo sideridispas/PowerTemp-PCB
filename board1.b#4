@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.3175" altunitdist="mm" altunit="mm"/>
+<grid distance="0.635" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.3175" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -663,15 +663,6 @@ design rules under a new name.</description>
 <via x="14.2875" y="14.2875" extent="1-16" drill="0.6"/>
 <wire x1="14.2875" y1="14.2875" x2="14.2875" y2="10.605" width="0.6096" layer="1"/>
 <via x="14.2875" y="10.605" extent="1-16" drill="0.6"/>
-</signal>
-<signal name="N$1">
-<via x="10.16" y="24.13" extent="1-16" drill="1.1"/>
-</signal>
-<signal name="N$3">
-<via x="12.7" y="24.13" extent="1-16" drill="1.1"/>
-</signal>
-<signal name="N$5">
-<via x="15.24" y="24.13" extent="1-16" drill="1.1"/>
 </signal>
 </signals>
 </board>
