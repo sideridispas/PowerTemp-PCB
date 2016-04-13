@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.3175" altunitdist="mm" altunit="mm"/>
+<grid distance="0.635" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.3175" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -186,7 +186,7 @@ DS18B20</text>
 <text x="43.4975" y="14.605" size="1.016" layer="26" font="vector" rot="MR90" align="bottom-center">DQ</text>
 <text x="43.4975" y="10.4775" size="1.016" layer="26" font="vector" rot="MR90" align="bottom-center">GND</text>
 <text x="26.78" y="34.4725" size="1.016" layer="26" font="vector" rot="MR0" align="top-right">Paschalis Sideridis
-April 2016</text>
+April 2016 v1.1</text>
 <text x="22.5425" y="6.985" size="1.016" layer="16" font="vector" rot="MR0" align="bottom-center">IMEC - KULEUVEN</text>
 <dimension x1="0" y1="35" x2="19" y2="35" x3="9.5" y3="37" textsize="0.6096" layer="47" width="0.03"/>
 <dimension x1="19" y1="35" x2="26" y2="35" x3="22.5" y3="23.5" textsize="0.6096" layer="47" width="0.03"/>
@@ -663,15 +663,6 @@ design rules under a new name.</description>
 <via x="14.2875" y="14.2875" extent="1-16" drill="0.6"/>
 <wire x1="14.2875" y1="14.2875" x2="14.2875" y2="10.605" width="0.6096" layer="1"/>
 <via x="14.2875" y="10.605" extent="1-16" drill="0.6"/>
-</signal>
-<signal name="N$1">
-<via x="10.16" y="24.13" extent="1-16" drill="1.1"/>
-</signal>
-<signal name="N$3">
-<via x="12.7" y="24.13" extent="1-16" drill="1.1"/>
-</signal>
-<signal name="N$5">
-<via x="15.24" y="24.13" extent="1-16" drill="1.1"/>
 </signal>
 </signals>
 </board>

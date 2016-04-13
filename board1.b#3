@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.3175" altunitdist="mm" altunit="mm"/>
+<grid distance="0.635" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.3175" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -515,8 +515,12 @@ design rules under a new name.</description>
 <attribute name="NAME" x="24.4475" y="1.97" size="1.016" layer="21" align="top-center"/>
 </element>
 <element name="LM78M05" library="Bart_educatief_aanbod" package="LM78M05_PAC" value="LM78M05" x="22.5" y="12.5"/>
-<element name="BUS1" library="Paschalis_connectors" package="AVX-3PIN-SMD-CON" value="AVX-3PIN-SMD-CON" x="40.005" y="14.605" rot="MR0"/>
-<element name="BUS2" library="Paschalis_connectors" package="AVX-3PIN-SMD-CON" value="AVX-3PIN-SMD-CON" x="5.08" y="14.605" rot="MR0"/>
+<element name="BUS1" library="Paschalis_connectors" package="AVX-3PIN-SMD-CON" value="AVX-3PIN-SMD-CON" x="40.005" y="14.605" smashed="yes" rot="MR0">
+<attribute name="NAME" x="40.1475" y="21.605" size="1.27" layer="26" rot="MR0" align="bottom-center"/>
+</element>
+<element name="BUS2" library="Paschalis_connectors" package="AVX-3PIN-SMD-CON" value="AVX-3PIN-SMD-CON" x="5.08" y="14.605" smashed="yes" rot="MR0">
+<attribute name="NAME" x="5.2225" y="21.605" size="1.27" layer="26" rot="MR0" align="bottom-center"/>
+</element>
 <element name="DS18B20" library="Paschalis_connectors" package="SMD-3PAD-DS18B20" value="SMD-3PAD-DS18B20" x="22.5" y="18.635" smashed="yes" rot="MR0"/>
 <element name="5V-OUT2" library="Paschalis_connectors" package="2PIN-TERMINAL-5MMPITCH" value="2PIN-TERMINAL-5MMPITCH" x="33" y="29.73" smashed="yes">
 <attribute name="NAME" x="32.92" y="25.38" size="1.27" layer="25" align="top-center"/>
@@ -608,7 +612,7 @@ design rules under a new name.</description>
 <wire x1="34.5" y1="23" x2="30.5" y2="27" width="0.8128" layer="1"/>
 <wire x1="30.5" y1="27" x2="30.5" y2="29.73" width="0.8128" layer="1"/>
 </signal>
-<signal name="N$6">
+<signal name="S_GND">
 <contactref element="BUS1" pad="P$1"/>
 <contactref element="BUS2" pad="P$1"/>
 <contactref element="DS18B20" pad="P$1"/>
@@ -616,7 +620,8 @@ design rules under a new name.</description>
 <wire x1="24.5" y1="18.635" x2="32.305340625" y2="18.635" width="0.6096" layer="16"/>
 <wire x1="32.305340625" y1="18.635" x2="39.975" y2="18.635" width="0.6096" layer="16"/>
 <wire x1="39.975" y1="18.635" x2="40.005" y2="18.605" width="0.6096" layer="16"/>
-<wire x1="5.08" y1="18.605" x2="11.94251875" y2="18.605" width="0.6096" layer="16"/>
+<wire x1="5.08" y1="18.605" x2="9.962546875" y2="18.605" width="0.6096" layer="16"/>
+<wire x1="10.16" y1="18.605" x2="11.94251875" y2="18.605" width="0.6096" layer="16"/>
 <wire x1="24.47" y1="18.605" x2="24.5" y2="18.635" width="0.6096" layer="16"/>
 <via x="11.94251875" y="18.605" extent="1-16" drill="0.6"/>
 <wire x1="11.94251875" y1="18.605" x2="11.94251875" y2="18.92751875" width="0.6096" layer="1"/>
@@ -625,8 +630,11 @@ design rules under a new name.</description>
 <via x="32.305340625" y="18.635" extent="1-16" drill="0.6"/>
 <wire x1="32.305340625" y1="18.635" x2="32.165" y2="18.635" width="0.6096" layer="1"/>
 <wire x1="32.165" y1="18.635" x2="30.48" y2="20.32" width="0.6096" layer="1"/>
+<via x="10.16" y="24.13" extent="1-16" drill="1.1"/>
+<wire x1="9.962546875" y1="18.605" x2="10.16" y2="18.605" width="0.6096" layer="16"/>
+<wire x1="10.16" y1="18.605" x2="10.16" y2="24.13" width="0.6096" layer="16"/>
 </signal>
-<signal name="N$7">
+<signal name="S_DQ">
 <contactref element="BUS2" pad="P$2"/>
 <contactref element="BUS1" pad="P$2"/>
 <contactref element="DS18B20" pad="P$2"/>
@@ -636,14 +644,21 @@ design rules under a new name.</description>
 <wire x1="22.5" y1="15.0425" x2="22.5425" y2="15" width="0.6096" layer="16"/>
 <wire x1="5.08" y1="14.605" x2="7.395" y2="14.605" width="0.6096" layer="16"/>
 <wire x1="7.395" y1="14.605" x2="9" y2="13" width="0.6096" layer="16"/>
-<wire x1="9" y1="13" x2="16" y2="13" width="0.6096" layer="16"/>
+<wire x1="9" y1="13" x2="11.892228125" y2="13" width="0.6096" layer="16"/>
+<wire x1="11.892228125" y1="13" x2="16" y2="13" width="0.6096" layer="16"/>
 <wire x1="16" y1="13" x2="18" y2="15" width="0.6096" layer="16"/>
 <wire x1="40.005" y1="14.605" x2="37.605" y2="14.605" width="0.6096" layer="16"/>
 <wire x1="37.605" y1="14.605" x2="36" y2="13" width="0.6096" layer="16"/>
 <wire x1="36" y1="13" x2="28.91" y2="13" width="0.6096" layer="16"/>
 <wire x1="28.91" y1="13" x2="26.91" y2="15" width="0.6096" layer="16"/>
+<via x="12.7" y="24.13" extent="1-16" drill="1.1"/>
+<wire x1="11.892228125" y1="13" x2="11.892228125" y2="15.702228125" width="0.6096" layer="16"/>
+<wire x1="11.892228125" y1="15.702228125" x2="13.335" y2="17.145" width="0.6096" layer="16"/>
+<wire x1="13.335" y1="17.145" x2="13.335" y2="20.955" width="0.6096" layer="16"/>
+<wire x1="13.335" y1="20.955" x2="12.7" y2="21.59" width="0.6096" layer="16"/>
+<wire x1="12.7" y1="21.59" x2="12.7" y2="24.13" width="0.6096" layer="16"/>
 </signal>
-<signal name="N$8">
+<signal name="S_VDD">
 <contactref element="BUS2" pad="P$3"/>
 <contactref element="BUS1" pad="P$3"/>
 <contactref element="DS18B20" pad="P$3"/>
@@ -659,6 +674,10 @@ design rules under a new name.</description>
 <via x="14.2875" y="14.2875" extent="1-16" drill="0.6"/>
 <wire x1="14.2875" y1="14.2875" x2="14.2875" y2="10.605" width="0.6096" layer="1"/>
 <via x="14.2875" y="10.605" extent="1-16" drill="0.6"/>
+<via x="15.24" y="24.13" extent="1-16" drill="1.1"/>
+<wire x1="18.635" y1="18.635" x2="16.925" y2="18.635" width="0.6096" layer="16"/>
+<wire x1="16.925" y1="18.635" x2="15.24" y2="20.32" width="0.6096" layer="16"/>
+<wire x1="15.24" y1="20.32" x2="15.24" y2="24.13" width="0.6096" layer="16"/>
 </signal>
 </signals>
 </board>
