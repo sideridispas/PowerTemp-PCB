@@ -2625,15 +2625,16 @@ Metric Code Size 5664</description>
 </classes>
 <parts>
 <part name="DC-IN" library="Paschalis_connectors" deviceset="2PIN-TERMINAL-5MMPITCH" device=""/>
-<part name="5V-OUT" library="Paschalis_connectors" deviceset="2PIN-TERMINAL-5MMPITCH" device=""/>
+<part name="5V-OUT1" library="Paschalis_connectors" deviceset="2PIN-TERMINAL-5MMPITCH" device=""/>
 <part name="C1" library="adafruit" deviceset="C-US" device="C3216" value="0.33u"/>
 <part name="C2" library="adafruit" deviceset="C-US" device="C3216" value="0.1u"/>
 <part name="D1" library="Bart_educatief_aanbod" deviceset="DIODE" device=""/>
 <part name="D2" library="Bart_educatief_aanbod" deviceset="DIODE" device=""/>
-<part name="U$3" library="Bart_educatief_aanbod" deviceset="LM78M05" device=""/>
+<part name="LM78M05" library="Bart_educatief_aanbod" deviceset="LM78M05" device=""/>
 <part name="BUS1" library="Paschalis_connectors" deviceset="AVX-3PIN-SMD-CON" device=""/>
 <part name="BUS2" library="Paschalis_connectors" deviceset="AVX-3PIN-SMD-CON" device=""/>
 <part name="DS18B20" library="Paschalis_connectors" deviceset="SMD-3PAD-DS18B20" device=""/>
+<part name="5V-OUT2" library="Paschalis_connectors" deviceset="2PIN-TERMINAL-5MMPITCH" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2650,30 +2651,32 @@ Metric Code Size 5664</description>
 </plain>
 <instances>
 <instance part="DC-IN" gate="G$1" x="15.24" y="101.6" rot="MR0"/>
-<instance part="5V-OUT" gate="G$1" x="106.68" y="101.6"/>
+<instance part="5V-OUT1" gate="G$1" x="106.68" y="101.6"/>
 <instance part="C1" gate="G$1" x="48.26" y="99.06"/>
 <instance part="C2" gate="G$1" x="86.36" y="99.06"/>
 <instance part="D1" gate="G$1" x="38.1" y="104.14"/>
 <instance part="D2" gate="G$1" x="38.1" y="88.9" rot="R180"/>
-<instance part="U$3" gate="G$1" x="68.58" y="101.6"/>
+<instance part="LM78M05" gate="G$1" x="68.58" y="101.6"/>
 <instance part="BUS1" gate="G$1" x="17.78" y="30.48" rot="MR0"/>
 <instance part="BUS2" gate="G$1" x="101.6" y="30.48"/>
 <instance part="DS18B20" gate="G$1" x="58.42" y="58.42"/>
+<instance part="5V-OUT2" gate="G$1" x="106.68" y="83.82"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="N$1" class="0">
+<net name="VIN" class="0">
 <segment>
 <pinref part="DC-IN" gate="G$1" pin="1"/>
 <pinref part="D1" gate="G$1" pin="1"/>
 <wire x1="22.86" y1="104.14" x2="33.02" y2="104.14" width="0.1524" layer="91"/>
+<label x="25.4" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="D1" gate="G$1" pin="2"/>
-<pinref part="U$3" gate="G$1" pin="1"/>
+<pinref part="LM78M05" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="104.14" x2="48.26" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="48.26" y1="104.14" x2="58.42" y2="104.14" width="0.1524" layer="91"/>
@@ -2681,9 +2684,9 @@ Metric Code Size 5664</description>
 <junction x="48.26" y="104.14"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="GND" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="2"/>
+<pinref part="LM78M05" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="93.98" x2="68.58" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="D2" gate="G$1" pin="1"/>
 <wire x1="68.58" y1="88.9" x2="48.26" y2="88.9" width="0.1524" layer="91"/>
@@ -2692,14 +2695,20 @@ Metric Code Size 5664</description>
 <wire x1="48.26" y1="93.98" x2="48.26" y2="88.9" width="0.1524" layer="91"/>
 <junction x="48.26" y="88.9"/>
 <wire x1="68.58" y1="88.9" x2="86.36" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="88.9" x2="96.52" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="88.9" x2="96.52" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="88.9" x2="93.98" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="88.9" x2="93.98" y2="99.06" width="0.1524" layer="91"/>
 <junction x="68.58" y="88.9"/>
-<pinref part="5V-OUT" gate="G$1" pin="2"/>
-<wire x1="96.52" y1="99.06" x2="99.06" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="5V-OUT1" gate="G$1" pin="2"/>
+<wire x1="93.98" y1="99.06" x2="99.06" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="86.36" y1="93.98" x2="86.36" y2="88.9" width="0.1524" layer="91"/>
 <junction x="86.36" y="88.9"/>
+<wire x1="93.98" y1="88.9" x2="93.98" y2="81.28" width="0.1524" layer="91"/>
+<junction x="93.98" y="88.9"/>
+<pinref part="5V-OUT2" gate="G$1" pin="2"/>
+<wire x1="93.98" y1="81.28" x2="99.06" y2="81.28" width="0.1524" layer="91"/>
+<label x="99.06" y="99.06" size="1.778" layer="95"/>
+<label x="99.06" y="81.28" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -2711,15 +2720,22 @@ Metric Code Size 5664</description>
 <wire x1="25.4" y1="99.06" x2="22.86" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="5V" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="3"/>
-<pinref part="5V-OUT" gate="G$1" pin="1"/>
+<pinref part="LM78M05" gate="G$1" pin="3"/>
+<pinref part="5V-OUT1" gate="G$1" pin="1"/>
 <wire x1="78.74" y1="104.14" x2="86.36" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="86.36" y1="104.14" x2="99.06" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="104.14" x2="96.52" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="104.14" x2="99.06" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="101.6" x2="86.36" y2="104.14" width="0.1524" layer="91"/>
 <junction x="86.36" y="104.14"/>
+<wire x1="96.52" y1="104.14" x2="96.52" y2="86.36" width="0.1524" layer="91"/>
+<junction x="96.52" y="104.14"/>
+<pinref part="5V-OUT2" gate="G$1" pin="1"/>
+<wire x1="96.52" y1="86.36" x2="99.06" y2="86.36" width="0.1524" layer="91"/>
+<label x="99.06" y="104.14" size="1.778" layer="95"/>
+<label x="99.06" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$6" class="0">
